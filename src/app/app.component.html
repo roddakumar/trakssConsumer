@@ -1,0 +1,61 @@
+<mat-toolbar color = "primary" class="header-toolbar">
+    <div class="logo" style="flex-grow: 1;margin-top: 10px">
+        <button  mat-raised-button color="primary"> TRACKSS </button>
+        
+        <mat-form-field style="padding: 10px;">
+          <mat-label>Location</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+    </div>
+    <div style="align-items: center;flex-grow: 3;margin-top: 10px">
+      <mat-form-field style="width: auto;">
+        <input matInput placeholder="Catalouge">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()">
+            
+          
+          
+          <h1>myAccount</h1>
+          </button>
+
+
+          <mat-menu #menu="matMenu" [overlapTrigger]="false">
+              <span (mouseleave)="menuTrigger.closeMenu()">
+                <button mat-menu-item>
+                  <mat-icon>home</mat-icon>
+                  <span>Profile</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>people_outline</mat-icon>
+                  <span>EditProfile</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>videocam</mat-icon>
+                  <span>Cart</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>exit_to_app</mat-icon>
+                  <span>Logout</span>
+                </button>
+              </span>
+              </mat-menu>
+
+    </div>
+  </mat-toolbar>
+  <mat-toolbar color="red">
+      <div>
+          <button mat-button>Electronics</button>
+          <button mat-button>Accessories</button>
+          <button mat-button>Furniture</button>
+          <button mat-button>Books</button>
+      </div>
+   </mat-toolbar>
+  <app-slide></app-slide>
+   <app-cards></app-cards>
+  <router-outlet></router-outlet>
