@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { log } from 'util';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'application';
-
+find: string;
   cities = [
     'Hyderabad',
     'Bangalore',
     'Chennai'
   ];
+  
+
 }
+
+

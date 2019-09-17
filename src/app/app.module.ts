@@ -19,22 +19,25 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatMenuModule} from '@angular/material/menu';
 import { CardsComponent } from './cards/cards.component';
 import { SlideComponent } from './slide/slide.component';
+import { SearchComponent } from './search/search.component';
+import { HeaderComponent } from './header/header.component';
 // import {MatCarouselSlideComponent} from '@NgModule/material-carousel';
 // import {MatCarouselSlide} from '@NgModule/material-carousel';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsComponent,
     SlideComponent,
+    SearchComponent,
+    HeaderComponent,
     // MatCarouselSlideComponent
-    
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //MatCarouselSlideComponent,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     ReactiveFormsModule,

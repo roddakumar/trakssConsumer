@@ -1,22 +1,20 @@
 <div style="display: flex; flex-flow: row wrap; justify-content: space-around">
 
 
-<mat-card class = "tp-card" *ngFor="let user of users">
+<mat-card class = "tp-card" *ngFor="let cataloug of catalouge">
         <mat-card-header>
-           <mat-card-title> {{ user }} </mat-card-title>
-           <mat-card-subtitle> Basics</mat-card-subtitle>
+           <mat-card-title> {{cataloug.catlougeType}} </mat-card-title>
+           <mat-card-subtitle> Products</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src = "https://www.dukane.com/wp-content/uploads/2019/09/menu-image-electronics.jpg" alt = "Learn HTML5">
+        <img mat-card-image src =' {{ cataloug.catalougeImage }} ' alt = "Learn HTML5">
         <mat-card-content>
            <p>
-              HTML5 is the next major revision of the HTML standard superseding
-              HTML 4.01, XHTML 1.0, and XHTML 1.1. HTML5 is a standard for
-              structuring and presenting content on the World Wide Web.
+            {{cataloug.catalougeDescription}}
            </p>
         </mat-card-content>
         <mat-card-actions>
-            <button  mat-raised-button color="primary">BuyNow</button>
-            <button  mat-raised-button color="primary">AddToCart</button>
+            <button  mat-raised-button color="primary">More</button>
+            
         </mat-card-actions>
      </mat-card>
 
