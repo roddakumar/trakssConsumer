@@ -12,9 +12,9 @@ find: string;
   cities = [
     'Hyderabad',
     'Bangalore',
-    'Chennai'
+    'Chennai',
+    'vijayawada'
   ];
-  
 
 }
 

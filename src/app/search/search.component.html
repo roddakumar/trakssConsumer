@@ -1,1 +1,24 @@
-<p>search works!</p>
+<div style="display: flex; flex-flow: row wrap; justify-content: space-around">
+
+
+    <mat-card class = "tp-card" *ngFor="let cataloug of catalogues">
+            <mat-card-header>
+               <mat-card-title> {{ cataloug.catalogueItem.catalogueTitle }} </mat-card-title>
+               <mat-card-subtitle> Products</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src =' {{ cataloug.catalougeImage }} ' alt = "Learn HTML5">
+            <mat-card-content>
+               <p>
+                {{cataloug.Category}}
+               </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button  mat-raised-button color="primary" (click)="gotoorder(cataloug.catalogueItem.catalogueItemId)">More</button>
+                
+            </mat-card-actions>
+         </mat-card>
+    
+    </div>
+<div *ngIf="isOrderSelected">
+   <app-order></app-order>
+</div>

@@ -1,0 +1,28 @@
+<div style="display: flex; flex-flow: row wrap; justify-content: space-around">
+   <mat-toolbar>ELECTRONICS</mat-toolbar>
+
+   <mat-card class = "tp-card" *ngFor="let cataloug of data1">
+           
+      <mat-card-header>
+            
+              <mat-card-subtitle> Products</mat-card-subtitle>
+           </mat-card-header>
+           <mat-card-title> {{ cataloug.catalogueItem.catalogueTitle }} </mat-card-title>
+           <img mat-card-image src ='https://via.placeholder.com/150' alt = "nothing">
+           <mat-card-content>
+              <p>
+               {{cataloug.Category}}</p>
+              <p><b>Features</b></p> <p>{{cataloug.catalogueItem.description}}</p>
+              <p><b>Price</b></p>
+              <p>{{cataloug.resellerItem.totalCost}}<br></p>
+              <p>Number Of Unit Available:{{cataloug.resellerItem.totalNumberOfUnitsPurchased}}</p>
+                  
+           </mat-card-content>
+
+           <mat-card-actions>
+               <button  mat-raised-button color="primary" (click)="gotoorder(cataloug.catalogueItem.catalogueItemId)">RentNow</button>
+               
+           </mat-card-actions>
+        </mat-card>
+   
+   </div>

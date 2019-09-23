@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,20 +19,33 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatMenuModule} from '@angular/material/menu';
 import { CardsComponent } from './cards/cards.component';
 import { SlideComponent } from './slide/slide.component';
-import { SearchComponent } from './search/search.component';
 import { HeaderComponent } from './header/header.component';
-// import {MatCarouselSlideComponent} from '@NgModule/material-carousel';
-// import {MatCarouselSlide} from '@NgModule/material-carousel';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { ItemSearchedComponent } from './item-searched/item-searched.component';
+import { ElectronicsComponent } from './electronics/electronics.component';
+import { FurnitureComponent } from './furniture/furniture.component';
+import { AppliancesComponent } from './appliances/appliances.component';
+import { BooksComponent } from './books/books.component';
+import { SearchComponent } from './search/search.component';
+import { OrderComponent } from './order/order.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsComponent,
     SlideComponent,
-    SearchComponent,
     HeaderComponent,
-    // MatCarouselSlideComponent
+    HomeComponent,
+    ItemSearchedComponent,
+    ElectronicsComponent,
+    FurnitureComponent,
+    AppliancesComponent,
+    BooksComponent,
+    SearchComponent,
+    OrderComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,8 +62,10 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     MDBBootstrapModule,
     MatInputModule, MatOptionModule, MatSelectModule, MatIconModule,
     MatCarouselModule
+
+
   ],
-  providers: [],
+  providers: [ItemSearchedComponent, OrderComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

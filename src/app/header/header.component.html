@@ -1,18 +1,18 @@
 <mat-toolbar color = "primary" class="header-toolbar">
     <div class="logo" style="flex-grow: 1;margin-top: 10px">
-        <button  mat-raised-button color="primary"> TRACKSS </button>
+        <button  mat-raised-button color="primary"> TRAKSS </button>
         
-        <mat-form-field style="padding: 10px;">
+        <!-- <mat-form-field style="padding: 10px;">
           <mat-label>Location</mat-label>
           <mat-select>
-            <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+            <mat-option *ngFor="let city of States" [value]="city">{{city}}</mat-option>
           </mat-select>
-        </mat-form-field>
+        </mat-form-field> -->
   
     </div>
     <div style="align-items: center;flex-grow: 3;margin-top: 10px">
        <mat-form-field style="width: auto;">
-        <input matInput placeholder="Catalouge" (keyup.enter)="search()" [(ngModel)]="find" >
+        <input matInput placeholder="Search" (keyup.enter)="getCatalouge(find)" [(ngModel)]="find" >
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field> 
       
@@ -35,7 +35,7 @@
                 </button>
                 <button mat-menu-item>
                   <mat-icon>people_outline</mat-icon>
-                  <span>EditProfile</span>
+                  <span (click)="goToProfile()">EditProfile</span>
                 </button>
                 <button mat-menu-item>
                   <mat-icon>videocam</mat-icon>
@@ -49,7 +49,5 @@
               </mat-menu>
 
     </div>
-    <div *ngFor="let item of data1 ">
-       <b>{{item.category}}</b>
-    </div>
+    
   </mat-toolbar>
